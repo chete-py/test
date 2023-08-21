@@ -1,6 +1,10 @@
 import streamlit as st
+import pandas as pd
 import datetime
-from fpdf import FPDF
+from reportlab.lib.pagesizes import letter
+from reportlab.lib import colors
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.platypus import SimpleDocTemplate, Paragraph
 
 
 def evaluate_score(user_answers):
@@ -27,6 +31,20 @@ def evaluate_score(user_answers):
 
     return user_score
 
+
+def create_pdf_report(user_info):
+    doc = SimpleDocTemplate("user_score_report.pdf", pagesize=letter)
+
+    styles = getSampleStyleSheet()
+    report = []
+
+    report.append(Paragraph("User Score Report", styles['Title']))
+
+    report.append(Paragraph("Name: {}".format(user_info["Name"].iloc[0]), styles['Normal']))
+    report.append(Paragraph("Score: {}/12".format(user_info["Score"].iloc[0]), styles['Normal']))
+    report.append(Paragraph("Time: {}".format(user_info["Time"].iloc[0]), styles['Normal']))
+
+    doc.build(report)
 
 def main():
     st.title("Corporate Insurance Anti-Money Laundering Assessment")
@@ -93,24 +111,29 @@ def main():
         # Evaluate user score
         user_score = evaluate_score(answers)
 
-       # Create a PDF report using fpdf
-        pdf = FPDF()
-        pdf.add_page()
-        pdf.set_font("Arial", size=12)
-        pdf.cell(200, 10, txt="SCORE REPORT", ln=True)
-        pdf.cell(200, 10, txt="Name: {}".format(user_name), ln=True)
-        pdf.cell(200, 10, txt="Score: {}/12".format(user_score), ln=True)
-        pdf.cell(200, 10, txt="Time: {}".format(datetime.datetime.now()), ln=True)
-        pdf_file_path = "user_score_report.pdf"
-        pdf.output(pdf_file_path)
+        user_info = pd.DataFrame({
+            "Name": [user_name],
+            "Score": [user_score],
+            "Time": [datetime.datetime.now()]
+        })
+
+        # Create a DataFrame with user information
+        user_info = pd.DataFrame({
+            "Name": [user_name],
+            "Score": [user_score],
+            "Time": [datetime.datetime.now()]
+        })
+
+        # Create PDF report
+        create_pdf_report(user_info)
 
         # Provide a download link for the user to download the PDF report
         st.download_button(
             label="Download PDF Report",
-            data=open(pdf_file_path, "rb").read(),
-            file_name=pdf_file_path,
+            data=open("user_score_report.pdf", "rb").read(),
+            file_name="user_score_report.pdf",
             mime="application/pdf"
         )
 
 if __name__ == "__main__":
-    main()
+    main() 
