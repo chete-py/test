@@ -76,10 +76,10 @@ def main():
     q13_answer = st.radio("Question 11: What is the penalty for tipping off, where someone discloses that a suspicious transaction has been reported? ", q13_choices)
 
     q14choices = ["Marketing the institution's services", "Ensuring that the institution doesn't make a profit", 'Overseeing and implementing AML policies and procedures', "Choosing the office's color scheme"]   
-    q14_answer = st.radio("Question 14: " What is the role of the AML Compliance Officer within a financial institution?”, q14_choices)
+    q14_answer = st.radio("Question 14: What is the role of the AML Compliance Officer within a financial institution?", q14_choices)
     
     q15_choices = ['Kenyan Police Department', 'Kenya Revenue Authority (KRA)', 'Insurance Regulatory Authority (IRA)', 'Central Bank of Kenya (CBK)']   
-    q15_answer = st.radio("Question 15:  Which regulatory body in Kenya oversees and enforces AML regulations for insurance companies?", q15_choices)
+    q15_answer = st.radio("Question 15: Which regulatory body in Kenya oversees and enforces AML regulations for insurance companies?", q15_choices)
       
 
     # Submit button
