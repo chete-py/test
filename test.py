@@ -72,7 +72,7 @@ def main():
     q12_choices = ["Inconsistent with the customer's profile ", "Unusual or unexplained", "Consistent with the customer's financial behavior ", "Lacks an apparent economic purpose "]   
     q12_answer = st.radio("Question 12: Which of the following is NOT a characteristic of a suspicious transaction?", q12_choices)
 
-    q13_choices = ['A pat on the back', 'A written warning', 'Fine and imprisonment', 'No penalty, it's encouraged']
+    q13_choices = ['A pat on the back', 'A written warning', 'Fine and imprisonment', "No penalty, it's encouraged"]
     q13_answer = st.radio("Question 11: What is the penalty for tipping off, where someone discloses that a suspicious transaction has been reported? ", q13_choices)
 
     q14choices = ['Marketing the institution's services', 'Ensuring that the institution doesn't make a profit', 'Overseeing and implementing AML policies and procedures', 'Choosing the office's color scheme']   
