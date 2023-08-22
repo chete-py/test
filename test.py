@@ -1,38 +1,14 @@
 import streamlit as st
 import pandas as pd
 import datetime
-#from deta import Deta
 
-def evaluate_score(user_answers):
-    correct_answers = {
-        "Question 1": "Insurance Regulatory Authority",
-        "Question 2": "Placement",
-        "Question 3": "Know Your Customer (KYC)",
-        "Question 4": "Banks, insurance companies, and lawyers",
-        "Question 5": "To criminalize money laundering and provide mechanisms to combat it",
-        "Question 6": "Layering",
-        "Question 7": "Fine and imprisonment",
-        "Question 8": "Politically Exposed Persons (PEPs)",
-        "Question 9": "Financial Action Task Force (FATF)",
-        "Question 10": "A customer making large cash deposits without a clear source of income",
-        "Question 11": "To verify the identity of customers and assess the risks they pose",
-        "Question 12": "Consistent with the customer's financial behavior"
-    }
-
-    user_score = 0
-    for question, user_answer in user_answers.items():
-        correct_answer = correct_answers[question]
-        if user_answer == correct_answer:
-            user_score += 1
-
-    return user_score
 
 def main():
     st.title("Corporate Insurance Anti-Money Laundering Assessment")
     user_name = st.text_input("Enter your name:")
     dep_name = st.text_input("Enter your department:")
 
-    # Question 1
+    # QuestionS
     q1_choices = ["Insurance Regulatory Authority", "Kenya Revenue Authority", "Financial Reporting Centre (FRC)", "Central Bank of Kenya"]   
     q1_answer = st.radio("Question 1: Which agency in Kenya is responsible for regulating and enforcing AML laws?", q1_choices)
 
@@ -70,11 +46,7 @@ def main():
     q12_answer = st.radio("Question 12: Which of the following is NOT a characteristic of a suspicious transaction?", q12_choices)
 
 
-
-    # Submit button
-    if st.button("Submit"):
-
-        answers = {
+    answers = {
             "Question 1": q1_answer,
             "Question 2": q2_answer,
             "Question 3": q3_answer,
@@ -88,6 +60,35 @@ def main():
             "Question 11": q11_answer,
             "Question 12": q12_answer,
         }
+
+    def evaluate_score(user_answers):
+    correct_answers = {
+        "Question 1": "Insurance Regulatory Authority",
+        "Question 2": "Placement",
+        "Question 3": "Know Your Customer (KYC)",
+        "Question 4": "Banks, insurance companies, and lawyers",
+        "Question 5": "To criminalize money laundering and provide mechanisms to combat it",
+        "Question 6": "Layering",
+        "Question 7": "Fine and imprisonment",
+        "Question 8": "Politically Exposed Persons (PEPs)",
+        "Question 9": "Financial Action Task Force (FATF)",
+        "Question 10": "A customer making large cash deposits without a clear source of income",
+        "Question 11": "To verify the identity of customers and assess the risks they pose",
+        "Question 12": "Consistent with the customer's financial behavior"
+    }
+
+    user_score = 0
+    for question, user_answer in user_answers.items():
+        correct_answer = correct_answers[question]
+        if user_answer == correct_answer:
+            user_score += 1
+
+    return user_score
+
+
+
+    # Submit button
+    if st.button("Submit"):        
 
         # Evaluate user score
         user_score = evaluate_score(answers)
