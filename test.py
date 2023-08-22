@@ -46,20 +46,7 @@ def main():
     q12_answer = st.radio("Question 12: Which of the following is NOT a characteristic of a suspicious transaction?", q12_choices)
 
 
-    answers = {
-            "Question 1": q1_answer,
-            "Question 2": q2_answer,
-            "Question 3": q3_answer,
-            "Question 4": q4_answer,
-            "Question 5": q5_answer,
-            "Question 6": q6_answer,
-            "Question 7": q7_answer,
-            "Question 8": q8_answer,
-            "Question 9": q9_answer,
-            "Question 10": q10_answer,
-            "Question 11": q11_answer,
-            "Question 12": q12_answer,
-        }
+    
 
 def evaluate_score(user_answers):
     correct_answers = {
@@ -94,6 +81,21 @@ if st.button("Submit"):
 
     # Evaluate user score
     user_score = evaluate_score(answers)
+
+    answers = {
+            "Question 1": q1_answer,
+            "Question 2": q2_answer,
+            "Question 3": q3_answer,
+            "Question 4": q4_answer,
+            "Question 5": q5_answer,
+            "Question 6": q6_answer,
+            "Question 7": q7_answer,
+            "Question 8": q8_answer,
+            "Question 9": q9_answer,
+            "Question 10": q10_answer,
+            "Question 11": q11_answer,
+            "Question 12": q12_answer,
+        }
 
     # Display the user's score
     st.success(f"Answers submitted successfully! Your score: {user_percentage}")
