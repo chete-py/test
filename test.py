@@ -32,8 +32,8 @@ def evaluate_score(user_answers):
 
 def main():
     st.title("Corporate Insurance Anti-Money Laundering Assessment")
-    user_name = st.text_input("Enter your name:", required=True)
-    dep_name = st.text_input("Enter your department:", required=True)
+    user_name = st.text_input("Enter your name:")
+    dep_name = st.text_input("Enter your department:")
 
     # QuestionS
     q1_choices = ["Insurance Regulatory Authority", "Kenya Revenue Authority", "Financial Reporting Centre (FRC)", "Central Bank of Kenya"]   
