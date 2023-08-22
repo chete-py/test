@@ -62,7 +62,7 @@ def main():
         }
 
     def evaluate_score(user_answers):
-    correct_answers = {
+        correct_answers = {
         "Question 1": "Insurance Regulatory Authority",
         "Question 2": "Placement",
         "Question 3": "Know Your Customer (KYC)",
