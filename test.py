@@ -85,6 +85,8 @@ def main():
 
     return user_score
 
+    # Calculate user score as a percentage
+    user_percentage = (user_score / 12) * 100
 
 
     # Submit button
@@ -93,11 +95,8 @@ def main():
         # Evaluate user score
         user_score = evaluate_score(answers)
 
-        # Calculate user score as a percentage
-        user_percentage = (user_score / 12) * 100
-
         # Display the user's score
-        st.success(f"Answers submitted successfully! Your score: {user_score}/12")
+        st.success(f"Answers submitted successfully! Your score: {user_percentage}")
 
          # Create a DataFrame with user information
         user_info = pd.DataFrame({
