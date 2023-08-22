@@ -113,23 +113,32 @@ def main():
         st.success(f"Answers submitted successfully! Your score: {user_percentage:.0f}%")
 
         
-        # Create a DataFrame with user information
-        user_info = pd.DataFrame({
-            "Name": [user_name],
-            "Department": [dep_name],
-            "Score": [f"{user_percentage:.0f}%"],
-            "Time": [datetime.datetime.now().strftime("%H:%M")]
-        })
-    
-        # Save the DataFrame to a CSV file
-        user_info.to_csv("user_score_report.csv", index=False)
-            
-        # Provide a download link for the user to download the report
+       
+        # Create an HTML report
+        html_report = f"""
+        <html>
+        <head>
+            <style>
+                body {{ font-family: Arial, sans-serif; }}
+                h1 {{ color: blue; }}
+            </style>
+        </head>
+        <body>
+            <h1>User Score Report</h1>
+            <p><strong>Name:</strong> {user_name}</p>
+            <p><strong>Department:</strong> {dep_name}</p>
+            <p><strong>Score:</strong> {user_percentage:.0f}%</p>
+            <p><strong>Time:</strong> {datetime.datetime.now().strftime("%H:%M")}</p>
+        </body>
+        </html>
+        """
+        
+        # Provide a download link for the user to download the HTML report
         st.download_button(
-            label="Download Score Report",
-            data=user_info.to_csv(index=False).encode('utf-8'),
-            file_name="user_score_report.csv",
-            mime="text/csv"
+            label="Download Score Report (HTML)",
+            data=html_report.encode('utf-8'),
+            file_name="user_score_report.html",
+            mime="text/html"
         )
 
 if __name__ == "__main__":
