@@ -124,7 +124,7 @@ def main():
             </style>
         </head>
         <body>
-            <h1>{user_name}'s Score Report</h1>
+            <h1>{user_name.upper()}'s SCORE REPORT</h1>
             <p><strong>Name:</strong> {user_name}</p>
             <p><strong>Department:</strong> {dep_name}</p>
             <p><strong>Score:</strong> {user_percentage:.0f}%</p>
