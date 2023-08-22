@@ -32,8 +32,8 @@ def evaluate_score(user_answers):
 
 def main():
     st.title("Corporate Insurance Anti-Money Laundering Assessment")
-    user_name = st.text_input("Enter your name:")
-    dep_name = st.text_input("Enter your department:")
+    user_name = st.text_input("Enter your name:", required=True)
+    dep_name = st.text_input("Enter your department:", required=True)
 
     # QuestionS
     q1_choices = ["Insurance Regulatory Authority", "Kenya Revenue Authority", "Financial Reporting Centre (FRC)", "Central Bank of Kenya"]   
@@ -120,11 +120,11 @@ def main():
         <head>
             <style>
                 body {{ font-family: Arial, sans-serif; }}
-                h1 {{ color: blue; }}
+                h1 {{ color: black; }}
             </style>
         </head>
         <body>
-            <h1>User Score Report</h1>
+            <h1>{user_name}'s Score Report</h1>
             <p><strong>Name:</strong> {user_name}</p>
             <p><strong>Department:</strong> {dep_name}</p>
             <p><strong>Score:</strong> {user_percentage:.0f}%</p>
