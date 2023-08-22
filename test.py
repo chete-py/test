@@ -94,16 +94,16 @@ def main():
         user_score = evaluate_score(answers)
     
         # Calculate user score as a percentage
-        user_percentage = user_score / 12 * 100 f"%"
+        user_percentage = user_score / 12 * 100 
         
         # Display the user's score
-        st.success(f"Answers submitted successfully! Your score: {user_percentage}")
+        st.success(f"Answers submitted successfully! Your score: {user_percentage:.0f}%")
     
         # Create a DataFrame with user information
         user_info = pd.DataFrame({
             "Name": [user_name],
             "Department": [dep_name],
-            "Score": [user_percentage],
+            "Score": [f"{user_percentage:.0f}%"],
             "Time": [datetime.datetime.now()]
         })
     
