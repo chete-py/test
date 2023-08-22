@@ -15,9 +15,9 @@ def evaluate_score(user_answers):
     "Question 9": "Financial Action Task Force (FATF)",
     "Question 10": "A customer making large cash deposits without a clear source of income",
     "Question 11": "To verify the identity of customers and assess the risks they pose",
-    "Question 12": "Consistent with the customer's financial behavior"
-    "Question 13": "Fine and imprisonment"
-    "Question 14": "Overseeing and implementing AML policies and procedures"
+    "Question 12": "Consistent with the customer's financial behavior",
+    "Question 13": "Fine and imprisonment",
+    "Question 14": "Overseeing and implementing AML policies and procedures",
     "Question 15": "Kenya Revenue Authority (KRA)"
     }
 
