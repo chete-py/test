@@ -90,33 +90,33 @@ def main():
          }
 
 
-    # Evaluate user score
-    user_score = evaluate_score(answers)
-
-    # Calculate user score as a percentage
-    user_percentage = (user_score / 12) * 100
+        # Evaluate user score
+        user_score = evaluate_score(answers)
     
-    # Display the user's score
-    st.success(f"Answers submitted successfully! Your score: {user_percentage}")
-
-    # Create a DataFrame with user information
-    user_info = pd.DataFrame({
-        "Name": [user_name],
-        "Department": [dep_name],
-        "Score": [user_percentage],
-        "Time": [datetime.datetime.now()]
-    })
-
-    # Save the DataFrame to a CSV file
-    user_info.to_csv("user_score_report.csv", index=False)
+        # Calculate user score as a percentage
+        user_percentage = (user_score / 12) * 100
         
-    # Provide a download link for the user to download the report
-    st.download_button(
-        label="Download Score Report",
-        data=user_info.to_csv(index=False).encode('utf-8'),
-        file_name="user_score_report.csv",
-        mime="text/csv"
-    )
+        # Display the user's score
+        st.success(f"Answers submitted successfully! Your score: {user_percentage}")
+    
+        # Create a DataFrame with user information
+        user_info = pd.DataFrame({
+            "Name": [user_name],
+            "Department": [dep_name],
+            "Score": [user_percentage],
+            "Time": [datetime.datetime.now()]
+        })
+    
+        # Save the DataFrame to a CSV file
+        user_info.to_csv("user_score_report.csv", index=False)
+            
+        # Provide a download link for the user to download the report
+        st.download_button(
+            label="Download Score Report",
+            data=user_info.to_csv(index=False).encode('utf-8'),
+            file_name="user_score_report.csv",
+            mime="text/csv"
+        )
 
 if __name__ == "__main__":
     main()
