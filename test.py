@@ -16,6 +16,9 @@ def evaluate_score(user_answers):
     "Question 10": "A customer making large cash deposits without a clear source of income",
     "Question 11": "To verify the identity of customers and assess the risks they pose",
     "Question 12": "Consistent with the customer's financial behavior"
+    "Question 13": "Fine and imprisonment"
+    "Question 14": "Overseeing and implementing AML policies and procedures"
+    "Question 15": "Kenya Revenue Authority (KRA)"
     }
 
     user_score = 0
@@ -69,6 +72,16 @@ def main():
     q12_choices = ["Inconsistent with the customer's profile ", "Unusual or unexplained", "Consistent with the customer's financial behavior ", "Lacks an apparent economic purpose "]   
     q12_answer = st.radio("Question 12: Which of the following is NOT a characteristic of a suspicious transaction?", q12_choices)
 
+    q13_choices = [ “A pat on the back”, “A written warning”, “Fine and imprisonment”, “No penalty, it's encouraged”]
+    q13_answer = st.radio("Question 11: What is the penalty for tipping off, where someone discloses that a suspicious transaction has been reported? ", q13_choices)
+
+    q14choices = [ “Marketing the institution's services “, ” Ensuring that the institution doesn't make a profit”, “Overseeing and implementing AML policies and procedures”, “Choosing the office's color scheme”]   
+    q14_answer = st.radio("Question 14: " What is the role of the AML Compliance Officer within a financial institution?”, q14_choices)
+    
+    q15_choices = [" Kenyan Police Department”, “Kenya Revenue Authority (KRA)", "Insurance Regulatory Authority (IRA)”, “Central Bank of Kenya (CBK)"]   
+    q15_answer = st.radio("Question 15:  Which regulatory body in Kenya oversees and enforces AML regulations for insurance companies?", q15_choices)
+
+
 
       
 
@@ -87,7 +100,10 @@ def main():
             "Question 10": q10_answer,
             "Question 11": q11_answer,
             "Question 12": q12_answer,
-         }
+            "Question 13": q11_answer,
+            "Question 14": q12_answer,
+            "Question 15": q15_answer,
+           }
 
 
         # Evaluate user score
