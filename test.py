@@ -61,20 +61,20 @@ def main():
             "Question 12": q12_answer,
         }
 
-    def evaluate_score(user_answers):
-        correct_answers = {
-        "Question 1": "Insurance Regulatory Authority",
-        "Question 2": "Placement",
-        "Question 3": "Know Your Customer (KYC)",
-        "Question 4": "Banks, insurance companies, and lawyers",
-        "Question 5": "To criminalize money laundering and provide mechanisms to combat it",
-        "Question 6": "Layering",
-        "Question 7": "Fine and imprisonment",
-        "Question 8": "Politically Exposed Persons (PEPs)",
-        "Question 9": "Financial Action Task Force (FATF)",
-        "Question 10": "A customer making large cash deposits without a clear source of income",
-        "Question 11": "To verify the identity of customers and assess the risks they pose",
-        "Question 12": "Consistent with the customer's financial behavior"
+def evaluate_score(user_answers):
+    correct_answers = {
+    "Question 1": "Insurance Regulatory Authority",
+    "Question 2": "Placement",
+    "Question 3": "Know Your Customer (KYC)",
+    "Question 4": "Banks, insurance companies, and lawyers",
+    "Question 5": "To criminalize money laundering and provide mechanisms to combat it",
+    "Question 6": "Layering",
+    "Question 7": "Fine and imprisonment",
+    "Question 8": "Politically Exposed Persons (PEPs)",
+    "Question 9": "Financial Action Task Force (FATF)",
+    "Question 10": "A customer making large cash deposits without a clear source of income",
+    "Question 11": "To verify the identity of customers and assess the risks they pose",
+    "Question 12": "Consistent with the customer's financial behavior"
     }
 
     user_score = 0
