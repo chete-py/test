@@ -74,21 +74,20 @@ def main():
 
 # Submit button
 if st.button("Submit"):
-
     answers = {
-            "Question 1": q1_answer,
-            "Question 2": q2_answer,
-            "Question 3": q3_answer,
-            "Question 4": q4_answer,
-            "Question 5": q5_answer,
-            "Question 6": q6_answer,
-            "Question 7": q7_answer,
-            "Question 8": q8_answer,
-            "Question 9": q9_answer,
-            "Question 10": q10_answer,
-            "Question 11": q11_answer,
-            "Question 12": q12_answer,
-        }
+        "Question 1": q1_answer,
+        "Question 2": q2_answer,
+        "Question 3": q3_answer,
+        "Question 4": q4_answer,
+        "Question 5": q5_answer,
+        "Question 6": q6_answer,
+        "Question 7": q7_answer,
+        "Question 8": q8_answer,
+        "Question 9": q9_answer,
+        "Question 10": q10_answer,
+        "Question 11": q11_answer,
+        "Question 12": q12_answer,
+     }
 
 
     # Evaluate user score
