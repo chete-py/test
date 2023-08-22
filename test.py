@@ -1,11 +1,7 @@
 import streamlit as st
-import datetime
 import pandas as pd
-from reportlab.lib.pagesizes import letter
-from reportlab.lib import colors
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.platypus import SimpleDocTemplate, Paragraph
-
+import datetime
+#from deta import Deta
 
 def evaluate_score(user_answers):
     correct_answers = {
@@ -31,25 +27,10 @@ def evaluate_score(user_answers):
 
     return user_score
 
-
-def create_pdf_report(user_info):
-    doc = SimpleDocTemplate("user_score_report.pdf", pagesize=letter)
-
-    styles = getSampleStyleSheet()
-    report = []
-
-    report.append(Paragraph("User Score Report", styles['Title']))
-
-    report.append(Paragraph("Name: {}".format(user_info["Name"].iloc[0]), styles['Normal']))
-    report.append(Paragraph("Score: {}/12".format(user_info["Score"].iloc[0]), styles['Normal']))
-    report.append(Paragraph("Time: {}".format(user_info["Time"].iloc[0]), styles['Normal']))
-
-    doc.build(report)
-
 def main():
     st.title("Corporate Insurance Anti-Money Laundering Assessment")
-
     user_name = st.text_input("Enter your name:")
+    dep_name = st.text_input("Enter your department:")
 
     # Question 1
     q1_choices = ["Insurance Regulatory Authority", "Kenya Revenue Authority", "Financial Reporting Centre (FRC)", "Central Bank of Kenya"]   
@@ -111,29 +92,27 @@ def main():
         # Evaluate user score
         user_score = evaluate_score(answers)
 
+        # Display the user's score
+        st.success(f"Answers submitted successfully! Your score: {user_score}/12")
+
+         # Create a DataFrame with user information
         user_info = pd.DataFrame({
             "Name": [user_name],
+            "Department": [dep_name],
             "Score": [user_score],
             "Time": [datetime.datetime.now()]
         })
 
-        # Create a DataFrame with user information
-        user_info = pd.DataFrame({
-            "Name": [user_name],
-            "Score": [user_score],
-            "Time": [datetime.datetime.now()]
-        })
-
-        # Create PDF report
-        create_pdf_report(user_info)
-
-        # Provide a download link for the user to download the PDF report
+        # Save the DataFrame to a CSV file
+        user_info.to_csv("user_score_report.csv", index=False)
+        
+        # Provide a download link for the user to download the report
         st.download_button(
-            label="Download PDF Report",
-            data=open("user_score_report.pdf", "rb").read(),
-            file_name="user_score_report.pdf",
-            mime="application/pdf"
+            label="Download Score Report",
+            data=user_info.to_csv(index=False).encode('utf-8'),
+            file_name="user_score_report.csv",
+            mime="text/csv"
         )
 
 if __name__ == "__main__":
-    main() 
+    main()
