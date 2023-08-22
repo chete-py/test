@@ -94,7 +94,7 @@ def main():
         user_score = evaluate_score(answers)
     
         # Calculate user score as a percentage
-        user_percentage = f"(user_score / 12 * 100)%"
+        user_percentage = user_score / 12 * 100 f"%"
         
         # Display the user's score
         st.success(f"Answers submitted successfully! Your score: {user_percentage}")
