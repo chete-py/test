@@ -99,16 +99,13 @@ def main():
         # Display the user's score
         st.success(f"Answers submitted successfully! Your score: {user_percentage:.0f}%")
 
-        submit_time = time.time()  
-        submit_time_formatted = time.strftime("%H:%M", time.localtime(start_time))
-
-    
+        
         # Create a DataFrame with user information
         user_info = pd.DataFrame({
             "Name": [user_name],
             "Department": [dep_name],
             "Score": [f"{user_percentage:.0f}%"],
-            "Time": [submit_time_formatted]
+            "Time": [datetime.datetime.now().strftime("%H:%M")]
         })
     
         # Save the DataFrame to a CSV file
