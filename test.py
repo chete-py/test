@@ -80,7 +80,7 @@ def main():
     q12_answer = st.radio("Question 12: Which of the following is NOT a characteristic of a suspicious transaction?", q12_choices)
 
     q13_choices = ['A pat on the back', 'A written warning', 'Fine and imprisonment', "No penalty, it's encouraged"]
-    q13_answer = st.radio("Question 11: What is the penalty for tipping off, where someone discloses that a suspicious transaction has been reported? ", q13_choices)
+    q13_answer = st.radio("Question 13: What is the penalty for tipping off, where someone discloses that a suspicious transaction has been reported? ", q13_choices)
 
     q14_choices = ["Marketing the institution's services", "Ensuring that the institution doesn't make a profit", 'Overseeing and implementing AML policies and procedures', "Choosing the office's color scheme"]   
     q14_answer = st.radio("Question 14: What is the role of the AML Compliance Officer within a financial institution?", q14_choices)
@@ -89,7 +89,7 @@ def main():
     q15_answer = st.radio("Question 15: Which regulatory body in Kenya oversees and enforces AML regulations for insurance companies?", q15_choices)
 
     q16_choices = ["Inconsistent with the customer's profile ", "Unusual or unexplained", "Consistent with the customer's financial behavior ", "Lacks an apparent economic purpose"]   
-    q16_answer = st.radio("Question 12: Which of the following is NOT a characteristic of a suspicious transaction?", q16_choices)
+    q16_answer = st.radio("Question 16: Which of the following is NOT a characteristic of a suspicious transaction?", q16_choices)
     
     q17_choices = ["To encourage money laundering activities", "To report legitimate financial transactions", "To report transactions that appear suspicious or unusual", "To promote tax evasion"]
     q17_answer = st.radio("Question 17: What is the purpose of the Suspicious Transaction Report (STR) under Kenyan AML laws?", q17_choices)
