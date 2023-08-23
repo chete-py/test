@@ -6,8 +6,8 @@ from datetime import timedelta
 
 def evaluate_score(user_answers):
     correct_answers = {
-    "Question 1": "Insurance Regulatory Authority",
-    "Question 2": "Placement",
+    "Question 1": "Financial Reporting Centre (FRC)",
+    "Question 2": "Expansion",
     "Question 3": "Know Your Customer (KYC)",
     "Question 4": "Banks, insurance companies, and lawyers",
     "Question 5": "To criminalize money laundering and provide mechanisms to combat it",
@@ -20,7 +20,7 @@ def evaluate_score(user_answers):
     "Question 12": "Consistent with the customer's financial behavior",
     "Question 13": "Fine and imprisonment",
     "Question 14": "Overseeing and implementing AML policies and procedures",
-    "Question 15": "Kenya Revenue Authority (KRA)"
+    "Question 15": "Insurance Regulatory Authority (IRA)"
     }
 
     user_score = 0
