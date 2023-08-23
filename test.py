@@ -112,7 +112,8 @@ def main():
         # Display the user's score
         st.success(f"Answers submitted successfully! Your score: {user_percentage:.0f}%")
 
-    if user_name:        
+    if user_name:
+        user_percentage = user_score / 12 * 100
        
         # Create an HTML report
         html_report = f"""
