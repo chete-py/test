@@ -113,6 +113,10 @@ def main():
         st.success(f"Answers submitted successfully! Your score: {user_percentage:.0f}%")
     
         if user_name:
+
+            # Calculate the current time plus three hours
+            submission_time = (datetime.datetime.now() + timedelta(hours=3)).strftime("%H:%M")
+
                   
             # Create an HTML report
             html_report = f"""
@@ -128,7 +132,7 @@ def main():
                 <p><strong>Name:</strong> {user_name}</p>
                 <p><strong>Department:</strong> {dep_name}</p>
                 <p><strong>Score:</strong> {user_percentage:.0f}%</p>
-                <p><strong>Time:</strong> {datetime.datetime.now().strftime("%H:%M")}</p>
+                <p><strong>Time Submitted:</strong> {submission_time}</p>
             </body>
             </html>
             """
