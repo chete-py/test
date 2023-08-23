@@ -20,7 +20,12 @@ def evaluate_score(user_answers):
     "Question 12": "Consistent with the customer's financial behavior",
     "Question 13": "Fine and imprisonment",
     "Question 14": "Overseeing and implementing AML policies and procedures",
-    "Question 15": "Insurance Regulatory Authority (IRA)"
+    "Question 15": "Insurance Regulatory Authority (IRA)",
+    "Question 16": "Hold positions of public authority or influence",
+    "Question 17": "To report transactions that appear suspicious or unusual",
+    "Question 18": "To establish policies and procedures to prevent money laundering",
+    "Question 19": "Integration",
+    "Question 20": "To identify and report suspicious transactions"
     }
 
     user_score = 0
@@ -82,6 +87,22 @@ def main():
     
     q15_choices = ['Kenyan Police Department', 'Kenya Revenue Authority (KRA)', 'Insurance Regulatory Authority (IRA)', 'Central Bank of Kenya (CBK)']   
     q15_answer = st.radio("Question 15: Which regulatory body in Kenya oversees and enforces AML regulations for insurance companies?", q15_choices)
+
+    q16_choices = ["Inconsistent with the customer's profile ", "Unusual or unexplained", "Consistent with the customer's financial behavior ", "Lacks an apparent economic purpose"]   
+    q16_answer = st.radio("Question 12: Which of the following is NOT a characteristic of a suspicious transaction?", q16_choices)
+    
+    q17_choices = ["To encourage money laundering activities", "To report legitimate financial transactions", "To report transactions that appear suspicious or unusual", "To promote tax evasion"]
+    q17_answer = st.radio("Question 17: What is the purpose of the Suspicious Transaction Report (STR) under Kenyan AML laws?", q17_choices)
+    
+    q18choices = ["To assist money launderers", "To create additional paperwork for businesses", "To establish policies and procedures to prevent money laundering", "To increase the workload of employees"]   
+    q18_answer = st.radio("Question 18: What is the main purpose of an AML Compliance Program?", q18_choices)
+                          
+    q19_choices = ["Laundering", "Whitewashing", "Mixing", "Integration"]   
+    q19_answer = st.radio("Question 19:  Which term refers to the process of making illegally obtained money appear legitimate by mixing it with legitimate funds?", q19_choices)
+    
+    q20_choices = ["To encourage larger premium payments", "To promote money laundering activities", "To identify and report suspicious transactions", "To expedite insurance claims"]   
+    q20_answer = st.radio("Question 20: What is the purpose of transaction monitoring in AML practices?", q20_choices)
+
       
 
     # Submit button
