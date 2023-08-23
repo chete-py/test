@@ -123,6 +123,11 @@ def main():
             "Question 13": q13_answer,
             "Question 14": q14_answer,
             "Question 15": q15_answer,
+            "Question 16": q16_answer,
+            "Question 17": q17_answer,
+            "Question 18": q18_answer,
+            "Question 19": q19_answer,
+            "Question 20": q20_answer
            }
 
 
