@@ -112,7 +112,7 @@ def main():
         # Display the user's score
         st.success(f"Answers submitted successfully! Your score: {user_percentage:.0f}%")
 
-        
+    if user_name:        
        
         # Create an HTML report
         html_report = f"""
@@ -134,7 +134,7 @@ def main():
         """
         
        # Create a download button with customized file name
-if user_name:
+
     st.download_button(
         label=f"Download {user_name}'s Score Report (HTML)",
         data=html_report.encode('utf-8'),
