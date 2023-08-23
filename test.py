@@ -133,13 +133,16 @@ def main():
         </html>
         """
         
-        # Provide a download link for the user to download the HTML report
-        st.download_button(
-            label="Download Score Report (HTML)",
-            data=html_report.encode('utf-8'),
-            file_name="user_score_report.html",
-            mime="text/html"
-        )
+       # Create a download button with customized file name
+if user_name:
+    st.download_button(
+        label=f"Download {user_name}'s Score Report (HTML)",
+        data=html_report.encode('utf-8'),
+        file_name=f"{user_name}_score_report.html",
+        mime="text/html"
+    )
+else:
+    st.warning("Please enter your name to generate the report.")
 
 if __name__ == "__main__":
     main()
