@@ -94,7 +94,7 @@ def main():
     q17_choices = ["To encourage money laundering activities", "To report legitimate financial transactions", "To report transactions that appear suspicious or unusual", "To promote tax evasion"]
     q17_answer = st.radio("Question 17: What is the purpose of the Suspicious Transaction Report (STR) under Kenyan AML laws?", q17_choices)
     
-    q18choices = ["To assist money launderers", "To create additional paperwork for businesses", "To establish policies and procedures to prevent money laundering", "To increase the workload of employees"]   
+    q18_choices = ["To assist money launderers", "To create additional paperwork for businesses", "To establish policies and procedures to prevent money laundering", "To increase the workload of employees"]   
     q18_answer = st.radio("Question 18: What is the main purpose of an AML Compliance Program?", q18_choices)
                           
     q19_choices = ["Laundering", "Whitewashing", "Mixing", "Integration"]   
