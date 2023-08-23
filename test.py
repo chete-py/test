@@ -111,36 +111,36 @@ def main():
         
         # Display the user's score
         st.success(f"Answers submitted successfully! Your score: {user_percentage:.0f}%")
-
-    if user_name:
-              
-        # Create an HTML report
-        html_report = f"""
-        <html>
-        <head>
-            <style>
-                body {{ font-family: Arial, sans-serif; }}
-                h1 {{ color: black; }}
-            </style>
-        </head>
-        <body>
-            <h1>{user_name.upper()}'s SCORE REPORT</h1>
-            <p><strong>Name:</strong> {user_name}</p>
-            <p><strong>Department:</strong> {dep_name}</p>
-            <p><strong>Score:</strong> {user_percentage:.0f}%</p>
-            <p><strong>Time:</strong> {datetime.datetime.now().strftime("%H:%M")}</p>
-        </body>
-        </html>
-        """
-        
-       # Create a download button with customized file name
-
-        st.download_button(
-            label=f"Download {user_name}'s Score Report (HTML)",
-            data=html_report.encode('utf-8'),
-            file_name=f"{user_name}_score_report.html",
-            mime="text/html"
-        )
+    
+        if user_name:
+                  
+            # Create an HTML report
+            html_report = f"""
+            <html>
+            <head>
+                <style>
+                    body {{ font-family: Arial, sans-serif; }}
+                    h1 {{ color: black; }}
+                </style>
+            </head>
+            <body>
+                <h1>{user_name.upper()}'s SCORE REPORT</h1>
+                <p><strong>Name:</strong> {user_name}</p>
+                <p><strong>Department:</strong> {dep_name}</p>
+                <p><strong>Score:</strong> {user_percentage:.0f}%</p>
+                <p><strong>Time:</strong> {datetime.datetime.now().strftime("%H:%M")}</p>
+            </body>
+            </html>
+            """
+            
+           # Create a download button with customized file name
+    
+            st.download_button(
+                label=f"Download {user_name}'s Score Report (HTML)",
+                data=html_report.encode('utf-8'),
+                file_name=f"{user_name}_score_report.html",
+                mime="text/html"
+            )
     else:
         st.warning("Please enter your name to generate the report.")
 
