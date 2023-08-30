@@ -138,10 +138,10 @@ def main():
     q28_answer = st.radio("Question 28: What is the main purpose of an AML Compliance Program?", q28_choices)
     
     q29_choices = ["Laundering", "Whitewashing", "Mixing", "Integration"]   
-    q29_answer = st.radio("Question 29:  Which term refers to the process of making illegally obtained money appear legitimate by mixing it with legitimate funds?, q29_choices)
+    q29_answer = st.radio("Question 29:  Which term refers to the process of making illegally obtained money appear legitimate by mixing it with legitimate funds?", q29_choices)
     
     q30_choices = ["To encourage larger premium payments", "To promote money laundering activities", "To identify and report suspicious transactions", "To expedite insurance claims"]   
-    q30_answer = st.radio("Question 30: What is the purpose of transaction monitoring in AML practices?, q30_choices)
+    q30_answer = st.radio("Question 30: What is the purpose of transaction monitoring in AML practices?", q30_choices)
     
 
       
