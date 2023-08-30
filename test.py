@@ -123,7 +123,7 @@ def main():
     q23_answer = st.radio("Question 23: Which of the following is an example of a money laundering technique?", q23_choices)
     
     q24choices = [ "Marketing the institution's services", "Ensuring that the institution doesn't make a profit", "Overseeing and implementing AML policies and procedures", "Choosing the office's color scheme"]   
-    q24_answer = st.radio("Question 24: " What is the role of the AML Compliance Officer within a financial institution?”, q24_choices)
+    q24_answer = st.radio("Question 24: What is the role of the AML Compliance Officer within a financial institution?", q24_choices)
         
     q25_choices = ["Kenyan Police DepartmentKenya", "Revenue Authority (KRA)", "Insurance Regulatory Authority (IRA)", "Central Bank of Kenya (CBK)"]   
     q25_answer = st.radio("Question 15:  Which regulatory body in Kenya oversees and enforces AML regulations for insurance companies?", q25_choices)
