@@ -25,7 +25,7 @@ def evaluate_score(user_answers):
     "Question 17": "To report transactions that appear suspicious or unusual",
     "Question 18": "To establish policies and procedures to prevent money laundering",
     "Question 19": "Integration",
-    "Question 20": "To identify and report suspicious transactions"
+    "Question 20": "To identify and report suspicious transactions",
     "Question 21": "Overseeing and supporting AML efforts",
     "Question 22": "The origin of the customer's premium payments",
     "Question 23": "Layering funds through complex transactions",
