@@ -117,7 +117,7 @@ def main():
     q21_answer = st.radio("Question 21: What is the role of senior management in AML compliance?", q21_choices)
     
     q22_choices = ["The location of the insurance company","The origin of the customer's premium payments","The customer's residence","The customer's occupation"]
-    q22_answer = st.radio("Question 22: What does the term "source of funds" refer to in AML context?", q22_choices)
+    q22_answer = st.radio("Question 22: What does the term 'source of funds' refer to in AML context?", q22_choices)
     
     q23_choices = [ "A pat on the back", "A written warning", "Fine and imprisonment", "No penalty, it's encouraged"]
     q23_answer = st.radio("Question 23: Which of the following is an example of a money laundering technique?", q23_choices)
