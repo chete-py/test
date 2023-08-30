@@ -26,6 +26,16 @@ def evaluate_score(user_answers):
     "Question 18": "To establish policies and procedures to prevent money laundering",
     "Question 19": "Integration",
     "Question 20": "To identify and report suspicious transactions"
+    "Question 21": "Overseeing and supporting AML efforts",
+    "Question 22": "The origin of the customer's premium payments",
+    "Question 23": "Layering funds through complex transactions",
+    "Question 24": "USD 10,000",
+    "Question 25": "To provide evidence of compliance and facilitate audits",
+    "Question 26": "Integration",
+    "Question 27": "By reporting suspicious transactions to relevant authorities",
+    "Question 28": "To develop and implement AML regulations and policies",
+    "Question 29": "To apply measures according to the assessed risk level",
+    "Question 30": "By conducting regular customer due diligence and transaction monitoring"
     }
 
     user_score = 0
@@ -114,9 +124,7 @@ def main():
     
     q24choices = [ "Marketing the institution's services", "Ensuring that the institution doesn't make a profit", "Overseeing and implementing AML policies and procedures", "Choosing the office's color scheme"]   
     q24_answer = st.radio("Question 24: " What is the role of the AML Compliance Officer within a financial institution?”, q24_choices)
-    
-    
-    
+        
     q25_choices = ["Kenyan Police DepartmentKenya", "Revenue Authority (KRA)", "Insurance Regulatory Authority (IRA)", "Central Bank of Kenya (CBK)"]   
     q25_answer = st.radio("Question 15:  Which regulatory body in Kenya oversees and enforces AML regulations for insurance companies?", q25_choices)
     
@@ -160,7 +168,17 @@ def main():
             "Question 17": q17_answer,
             "Question 18": q18_answer,
             "Question 19": q19_answer,
-            "Question 20": q20_answer
+            "Question 20": q20_answer,
+            "Question 21": q21_answer,
+            "Question 22": q22_answer,
+            "Question 23": q23_answer,
+            "Question 24": q24_answer,
+            "Question 25": q25_answer,
+            "Question 26": q26_answer,
+            "Question 27": q27_answer,
+            "Question 28": q28_answer,
+            "Question 29": q29_answer,
+            "Question 30": q30_answer
            }
 
 
