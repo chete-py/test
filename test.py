@@ -126,7 +126,7 @@ def main():
     q24_answer = st.radio("Question 24: What is the role of the AML Compliance Officer within a financial institution?", q24_choices)
         
     q25_choices = ["Kenyan Police DepartmentKenya", "Revenue Authority (KRA)", "Insurance Regulatory Authority (IRA)", "Central Bank of Kenya (CBK)"]   
-    q25_answer = st.radio("Question 15:  Which regulatory body in Kenya oversees and enforces AML regulations for insurance companies?", q25_choices)
+    q25_answer = st.radio("Question 25:  Which regulatory body in Kenya oversees and enforces AML regulations for insurance companies?", q25_choices)
     
     q26_choices = ["Inconsistent with the customer's profile ", "Unusual or unexplained", "Consistent with the customer's financial behavior ", "Lacks an apparent economic purpose "]   
     q26_answer = st.radio("Question 26: Which of the following is NOT a characteristic of a suspicious transaction?", q26_choices)
