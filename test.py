@@ -122,7 +122,7 @@ def main():
     q23_choices = [ "A pat on the back", "A written warning", "Fine and imprisonment", "No penalty, it's encouraged"]
     q23_answer = st.radio("Question 23: Which of the following is an example of a money laundering technique?", q23_choices)
     
-    q24choices = [ "Marketing the institution's services", "Ensuring that the institution doesn't make a profit", "Overseeing and implementing AML policies and procedures", "Choosing the office's color scheme"]   
+    q24_choices = [ "Marketing the institution's services", "Ensuring that the institution doesn't make a profit", "Overseeing and implementing AML policies and procedures", "Choosing the office's color scheme"]   
     q24_answer = st.radio("Question 24: What is the role of the AML Compliance Officer within a financial institution?", q24_choices)
         
     q25_choices = ["Kenyan Police DepartmentKenya", "Revenue Authority (KRA)", "Insurance Regulatory Authority (IRA)", "Central Bank of Kenya (CBK)"]   
@@ -134,7 +134,7 @@ def main():
     q27_choices = ["To encourage money laundering activities", "To report legitimate financial transactions", "To report transactions that appear suspicious or unusual", "To promote tax evasion"]
     q27_answer = st.radio("Question 27: What is the purpose of the Suspicious Transaction Report (STR) under Kenyan AML laws?", q27_choices)
     
-    q28choices = ["To assist money launderers", "To create additional paperwork for businesses", "To establish policies and procedures to prevent money laundering", "To increase the workload of employees"]   
+    q28_choices = ["To assist money launderers", "To create additional paperwork for businesses", "To establish policies and procedures to prevent money laundering", "To increase the workload of employees"]   
     q28_answer = st.radio("Question 28: What is the main purpose of an AML Compliance Program?", q28_choices)
     
     q29_choices = ["Laundering", "Whitewashing", "Mixing", "Integration"]   
