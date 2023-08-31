@@ -98,8 +98,8 @@ def main():
     q15_choices = ['Kenyan Police Department', 'Kenya Revenue Authority (KRA)', 'Insurance Regulatory Authority (IRA)', 'Central Bank of Kenya (CBK)']   
     q15_answer = st.radio("Question 15: Which regulatory body in Kenya oversees and enforces AML regulations for insurance companies?", q15_choices)
 
-    q16_choices = ["Inconsistent with the customer's profile ", "Unusual or unexplained", "Consistent with the customer's financial behavior ", "Lacks an apparent economic purpose"]   
-    q16_answer = st.radio("Question 16: Which of the following is NOT a characteristic of a suspicious transaction?", q16_choices)
+    q16_choices = ["Are actively involved in insurance sales", "Hold positions of public authority or influence", "Have been convicted of money laundering", "Belong to an insurance industry association"]   
+    q16_answer = st.radio("Question 16: The term 'Politically Exposed Person' (PEP) refers to individuals who:", q16_choices)
     
     q17_choices = ["To encourage money laundering activities", "To report legitimate financial transactions", "To report transactions that appear suspicious or unusual", "To promote tax evasion"]
     q17_answer = st.radio("Question 17: What is the purpose of the Suspicious Transaction Report (STR) under Kenyan AML laws?", q17_choices)
