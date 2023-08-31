@@ -119,32 +119,32 @@ def main():
     q22_choices = ["The location of the insurance company","The origin of the customer's premium payments","The customer's residence","The customer's occupation"]
     q22_answer = st.radio("Question 22: What does the term 'source of funds' refer to in AML context?", q22_choices)
     
-    q23_choices = [ "A pat on the back", "A written warning", "Fine and imprisonment", "No penalty, it's encouraged"]
+    q23_choices = ["Transparent premium payments from a known source", "Regular customer verification", "Layering funds through complex transactions", "Accurate record-keeping"]
     q23_answer = st.radio("Question 23: Which of the following is an example of a money laundering technique?", q23_choices)
-    
-    q24_choices = [ "Marketing the institution's services", "Ensuring that the institution doesn't make a profit", "Overseeing and implementing AML policies and procedures", "Choosing the office's color scheme"]   
-    q24_answer = st.radio("Question 24: What is the role of the AML Compliance Officer within a financial institution?", q24_choices)
-        
-    q25_choices = ["Kenyan Police DepartmentKenya", "Revenue Authority (KRA)", "Insurance Regulatory Authority (IRA)", "Central Bank of Kenya (CBK)"]   
-    q25_answer = st.radio("Question 25:  Which regulatory body in Kenya oversees and enforces AML regulations for insurance companies?", q25_choices)
-    
-    q26_choices = ["Inconsistent with the customer's profile ", "Unusual or unexplained", "Consistent with the customer's financial behavior ", "Lacks an apparent economic purpose "]   
-    q26_answer = st.radio("Question 26: Which of the following is NOT a characteristic of a suspicious transaction?", q26_choices)
-    
-    q27_choices = ["To encourage money laundering activities", "To report legitimate financial transactions", "To report transactions that appear suspicious or unusual", "To promote tax evasion"]
-    q27_answer = st.radio("Question 27: What is the purpose of the Suspicious Transaction Report (STR) under Kenyan AML laws?", q27_choices)
-    
-    q28_choices = ["To assist money launderers", "To create additional paperwork for businesses", "To establish policies and procedures to prevent money laundering", "To increase the workload of employees"]   
-    q28_answer = st.radio("Question 28: What is the main purpose of an AML Compliance Program?", q28_choices)
-    
-    q29_choices = ["Laundering", "Whitewashing", "Mixing", "Integration"]   
-    q29_answer = st.radio("Question 29:  Which term refers to the process of making illegally obtained money appear legitimate by mixing it with legitimate funds?", q29_choices)
-    
-    q30_choices = ["To encourage larger premium payments", "To promote money laundering activities", "To identify and report suspicious transactions", "To expedite insurance claims"]   
-    q30_answer = st.radio("Question 30: What is the purpose of transaction monitoring in AML practices?", q30_choices)
-    
 
-      
+    q24choices = ["USD 1,000", "USD 10,000", "USD 1,000,000", "USD 100,000"]   
+    q24_answer = st.radio("Question 24: What is the threshold for reporting large transactions under AML regulations in Kenya?, q24_choices)
+    
+    q25_choices = ["To increase administrative burden", "To discourage customer engagement", "To provide evidence of compliance and facilitate audits", "To eliminate customer profiles"]   
+    q25_answer = st.radio("Question 15:  What is the importance of record-keeping in AML efforts?, q25_choices)
+    
+    q26_choices = ["Aggregation", "Layering", "Placement", "Integration"]   
+    q26_answer = st.radio("Question 26: What is the term for the process of turning "dirty" money into "clean" assets?, q26_choices)
+    
+    q27_choices = ["By facilitating large premium payments", "By offering lower premium rates", "By reporting suspicious transactions to relevant authorities", "By promoting anonymous claims"]
+    q27_answer = st.radio("Question 27: How can insurance companies contribute to combating terrorist financing?", q27_choices)
+    
+    q28choices = ["To support money laundering activities", "To regulate the sale of insurance policies", "To develop and implement AML regulations and policies", "To encourage anonymous premium payments"]   
+    q28_answer = st.radio("Question 28: What is the role of the Kenyan government in AML efforts?
+    , q28_choices)
+    
+    q29_choices = ["To treat all customers the same way", "To focus on low-risk customers only", "To apply measures according to the assessed risk level", "To encourage money laundering activities"]   
+    q29_answer = st.radio("Question 29 What is the importance of a risk-based approach in AML practices?, q29_choices)
+    
+    q30_choices = ["By avoiding all customers with high premium payments", "By not implementing any AML measures", "By conducting regular customer due diligence and transaction monitoring", "By encouraging money laundering activities"]
+    q30_answer = st.radio("Question 30: How can insurance companies effectively mitigate AML risks?, q30_choices)
+
+     
 
     # Submit button
     if st.button("Submit"):
