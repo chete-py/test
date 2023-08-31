@@ -129,7 +129,7 @@ def main():
     q25_answer = st.radio("Question 15:  What is the importance of record-keeping in AML efforts?", q25_choices)
     
     q26_choices = ["Aggregation", "Layering", "Placement", "Integration"]   
-    q26_answer = st.radio("Question 26: What is the term for the process of turning 'dirty' money into "clean" assets?", q26_choices)
+    q26_answer = st.radio("Question 26: What is the term for the process of turning 'dirty' money into 'clean' assets?", q26_choices)
     
     q27_choices = ["By facilitating large premium payments", "By offering lower premium rates", "By reporting suspicious transactions to relevant authorities", "By promoting anonymous claims"]
     q27_answer = st.radio("Question 27: How can insurance companies contribute to combating terrorist financing?", q27_choices)
