@@ -123,26 +123,25 @@ def main():
     q23_answer = st.radio("Question 23: Which of the following is an example of a money laundering technique?", q23_choices)
 
     q24choices = ["USD 1,000", "USD 10,000", "USD 1,000,000", "USD 100,000"]   
-    q24_answer = st.radio("Question 24: What is the threshold for reporting large transactions under AML regulations in Kenya?, q24_choices)
+    q24_answer = st.radio("Question 24: What is the threshold for reporting large transactions under AML regulations in Kenya?", q24_choices)
     
     q25_choices = ["To increase administrative burden", "To discourage customer engagement", "To provide evidence of compliance and facilitate audits", "To eliminate customer profiles"]   
-    q25_answer = st.radio("Question 15:  What is the importance of record-keeping in AML efforts?, q25_choices)
+    q25_answer = st.radio("Question 15:  What is the importance of record-keeping in AML efforts?", q25_choices)
     
     q26_choices = ["Aggregation", "Layering", "Placement", "Integration"]   
-    q26_answer = st.radio("Question 26: What is the term for the process of turning "dirty" money into "clean" assets?, q26_choices)
+    q26_answer = st.radio("Question 26: What is the term for the process of turning "dirty" money into "clean" assets?", q26_choices)
     
     q27_choices = ["By facilitating large premium payments", "By offering lower premium rates", "By reporting suspicious transactions to relevant authorities", "By promoting anonymous claims"]
     q27_answer = st.radio("Question 27: How can insurance companies contribute to combating terrorist financing?", q27_choices)
     
     q28choices = ["To support money laundering activities", "To regulate the sale of insurance policies", "To develop and implement AML regulations and policies", "To encourage anonymous premium payments"]   
-    q28_answer = st.radio("Question 28: What is the role of the Kenyan government in AML efforts?
-    , q28_choices)
+    q28_answer = st.radio("Question 28: What is the role of the Kenyan government in AML efforts?", q28_choices)
     
     q29_choices = ["To treat all customers the same way", "To focus on low-risk customers only", "To apply measures according to the assessed risk level", "To encourage money laundering activities"]   
-    q29_answer = st.radio("Question 29 What is the importance of a risk-based approach in AML practices?, q29_choices)
+    q29_answer = st.radio("Question 29 What is the importance of a risk-based approach in AML practices?", q29_choices)
     
     q30_choices = ["By avoiding all customers with high premium payments", "By not implementing any AML measures", "By conducting regular customer due diligence and transaction monitoring", "By encouraging money laundering activities"]
-    q30_answer = st.radio("Question 30: How can insurance companies effectively mitigate AML risks?, q30_choices)
+    q30_answer = st.radio("Question 30: How can insurance companies effectively mitigate AML risks?", q30_choices)
 
      
 
