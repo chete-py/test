@@ -122,7 +122,7 @@ def main():
     q23_choices = ["Transparent premium payments from a known source", "Regular customer verification", "Layering funds through complex transactions", "Accurate record-keeping"]
     q23_answer = st.radio("Question 23: Which of the following is an example of a money laundering technique?", q23_choices)
 
-    q24choices = ["USD 1,000", "USD 10,000", "USD 1,000,000", "USD 100,000"]   
+    q24_choices = ["USD 1,000", "USD 10,000", "USD 1,000,000", "USD 100,000"]   
     q24_answer = st.radio("Question 24: What is the threshold for reporting large transactions under AML regulations in Kenya?", q24_choices)
     
     q25_choices = ["To increase administrative burden", "To discourage customer engagement", "To provide evidence of compliance and facilitate audits", "To eliminate customer profiles"]   
@@ -134,7 +134,7 @@ def main():
     q27_choices = ["By facilitating large premium payments", "By offering lower premium rates", "By reporting suspicious transactions to relevant authorities", "By promoting anonymous claims"]
     q27_answer = st.radio("Question 27: How can insurance companies contribute to combating terrorist financing?", q27_choices)
     
-    q28choices = ["To support money laundering activities", "To regulate the sale of insurance policies", "To develop and implement AML regulations and policies", "To encourage anonymous premium payments"]   
+    q28_choices = ["To support money laundering activities", "To regulate the sale of insurance policies", "To develop and implement AML regulations and policies", "To encourage anonymous premium payments"]   
     q28_answer = st.radio("Question 28: What is the role of the Kenyan government in AML efforts?", q28_choices)
     
     q29_choices = ["To treat all customers the same way", "To focus on low-risk customers only", "To apply measures according to the assessed risk level", "To encourage money laundering activities"]   
