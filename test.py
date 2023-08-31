@@ -126,7 +126,7 @@ def main():
     q24_answer = st.radio("Question 24: What is the threshold for reporting large transactions under AML regulations in Kenya?", q24_choices)
     
     q25_choices = ["To increase administrative burden", "To discourage customer engagement", "To provide evidence of compliance and facilitate audits", "To eliminate customer profiles"]   
-    q25_answer = st.radio("Question 15:  What is the importance of record-keeping in AML efforts?", q25_choices)
+    q25_answer = st.radio("Question 25:  What is the importance of record-keeping in AML efforts?", q25_choices)
     
     q26_choices = ["Aggregation", "Layering", "Placement", "Integration"]   
     q26_answer = st.radio("Question 26: What is the term for the process of turning 'dirty' money into 'clean' assets?", q26_choices)
